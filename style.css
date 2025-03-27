@@ -133,6 +133,41 @@
     transition: 0.4s ease-in-out;
   }
 
+
+
+  .skills-container {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+
   .home-img img:hover{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
@@ -142,7 +177,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 1rem;
     background: transparent;
     border: 2px solid var(--main-color);
@@ -213,18 +248,22 @@
               0 0 100px var(--main-color);
 }
 .about-content h2{
-  font-size: 7rem;
+  font-size: 5rem;
   text-align: left;
 
 }
+
 .about-content p{
   font-size: 1.8rem;
 }
-.about-content .btn{
-  margin: 3rem 0;
+.about-content h1{
+  font-size: 3rem;
+  margin-top: 3rem;
+  
 }
+
 ::-webkit-scrollbar{
-  width: 20px;
+  width: 10px;
 
 }
 ::-webkit-scrollbar-thumb{
@@ -232,4 +271,150 @@
 }
 ::-webkit-scrollbar-track{
   background-color: var(--bg-color);
+}
+
+.projects {
+  padding: 5rem 2rem;
+  padding-top: 120px; 
+  background: black;
+  text-align: center;
+}
+
+.projects .heading {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+  position: relative;
+}
+
+.projects .heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 1.5rem auto 0;
+}
+
+
+.projects-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  row-gap: 5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--text-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.3s ease;
+
+  
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #007BFF;
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  margin: 1.5rem 0 1rem;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 1.3rem;
+  padding: 0 1.5rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: var(--main-color);
+  color: var(--text-color);
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+  transform: scale(1.02);
+}
+
+.contact{
+  background-color: var(--bg-color);
+}
+.contact h2{
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+.contact form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.contact form .input-box input, 
+.contact form textarea {
+width: 100%;
+padding: 2.5rem;
+font-size: 1.8rem;
+color: var(--text-color);
+background-color: var(--bg-color);
+border-radius: 2rem;
+border: 2px solid var(--main-color);
+margin: 1.5rem 0;
+resize: none ;
+
+}
+
+.input-group-2 .btn {
+  padding: 1rem 2rem;
+  background: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  letter-spacing: 1px;
+  align-self: flex-end; 
+  width: auto; 
+}
+
+.input-group-2 .btn:hover {
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+  transform: scale(1.02);
 }
