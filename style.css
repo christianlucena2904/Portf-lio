@@ -92,6 +92,13 @@
     transform: scale(1.05);
 
   }
+  .gradient-btn a{
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  .gradient-btn:hover a{
+    color: var(--text-color);
+  }
 
   section{
     min-height: 100vh;
@@ -369,6 +376,7 @@
 
 .contact{
   background-color: var(--bg-color);
+ 
 }
 .contact h2{
   margin-bottom: 3rem;
